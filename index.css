@@ -1,0 +1,291 @@
+/*
+
+PART 1:
+
+You've been ordered to improve your company's newsletter form. 
+You can design it however you want, but the manager wants the button to
+animate both on the :hover and the :active state.
+
+1. Redesign the page (e.g. colors, positions, sizing, spacing)
+2. Improve the button's hover effect
+3. Improve thee button's click effect
+
+SKILLS:
+color, background, margin, padding, border-radius, 
+CSS pseudo selectors (:active, :hover), transform
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  font-family: "Noto Sans", sans-serif;
+}
+
+.section-area {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: url(https://source.unsplash.com/weekly?water) no-repeat center;
+  background-size: cover;
+}
+
+.section-area::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  opacity: 0.7;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  text-align: center;
+}
+
+.form-wrapper {
+  margin: auto;
+  padding: 30px;
+  background: white;
+  width: auto;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-wrapper:hover {
+  transform: translate(0, -20px);
+  box-shadow: 0 0 10px #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h2 {
+  /* color: #31e8ff; */
+  color: #666;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+
+input {
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 4px #ccc;
+}
+
+button {
+  display: block;
+  border-radius: 50px;
+  background: white;
+  padding: 8px 30px;
+  margin: 40px auto;
+  border: 2px solid #ccc;
+  color: #666;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  color: white;
+}
+
+.form-wrapper:hover button {
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  color: white;
+}
+
+button:active {
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  color: white;
+  font-size: 1.1rem;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.social .icon:hover {
+  border: 2px solid #0074d9;
+  transition: 1.4s;
+}
+
+.social .icon path {
+  fill: transparent;
+  stroke-width: 15;
+  stroke: #0074d9;
+}
+
+/* FB SVG */
+
+.social .fb {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  padding: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 4px #ccc;
+  cursor: pointer;
+}
+
+.social .icon.fb path {
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 0;
+}
+
+.social .icon.fb:hover path {
+  animation: animate-fb 1s linear forwards;
+}
+
+/* IG SVG */
+
+.social .ig {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  padding: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 8px #020202;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 4px #ccc;
+  cursor: pointer;
+}
+
+.social .icon.ig path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 0;
+}
+
+.social .icon.ig:hover path {
+  animation: animate-ig 1s linear forwards;
+}
+
+/* TWITTER SVG */
+
+.social .twitter {
+  background: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  padding: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 8px #020202;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 4px #ccc;
+  cursor: pointer;
+}
+
+.social .icon .twitter path {
+  stroke-dasharray: 2100;
+  stroke-dashoffset: 0;
+}
+
+.social .icon.twitter:hover path {
+  animation: animate-fb 1s linear forwards;
+}
+
+/*********************/
+/******ANIMATIONS*****/
+/*********************/
+
+@keyframes animate-fb {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1600;
+  }
+  80% {
+    stroke-dashoffset: 3200;
+  }
+  100% {
+    stroke-dashoffset: 3200;
+    fill: #0074d9;
+  }
+}
+
+@keyframes animate-ig {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1800;
+  }
+  80% {
+    stroke-dashoffset: 3600;
+  }
+  100% {
+    stroke-dashoffset: 3600;
+    fill: #0074d9;
+  }
+}
+
+@keyframes animate-twitter {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1600;
+  }
+  80% {
+    stroke-dashoffset: 3200;
+  }
+  100% {
+    stroke-dashoffset: 3200;
+    fill: #0074d9;
+  }
+}
