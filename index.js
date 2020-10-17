@@ -9,12 +9,19 @@ PART 2: STRETCH GOAL
 
 const email = document.getElementById("email-input")
 const form = document.getElementById("myForm")
+const successMsg = document.getElementById("message-success")
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
     e.preventDefault()
     console.log("email: ", email.value)
+    showSuccessMsg(4000)
 })
 
-const thanks = () => {
-    window.alert("Thank you for subscribing!");
+
+function showSuccessMsg(interval) {
+    successMsg.className = "visible"
+    setInterval(() => {
+        successMsg.className = "hidden"
+    }, interval);
 }
+
