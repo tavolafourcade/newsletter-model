@@ -289,3 +289,30 @@ button:active {
     fill: #0074d9;
   }
 }
+
+#message-success {
+  position: absolute; 
+  left: 50%;
+}
+
+.dialog-message {
+  position: relative; 
+  left: -50%; 
+  background-color: #55efc4;
+  bottom: 50%;
+  margin-top: 100px;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s linear;
+}
