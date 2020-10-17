@@ -7,21 +7,26 @@ PART 2: STRETCH GOAL
 
 */
 
-const email = document.getElementById("email-input")
-const form = document.getElementById("myForm")
-const successMsg = document.getElementById("message-success")
+const email=document.getElementById("email-input")
+const form=document.getElementById("myForm")
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit",function (e) {
     e.preventDefault()
-    console.log("email: ", email.value)
-    showSuccessMsg(4000)
+    console.log("email: ",email.value)
 })
 
+//js for animating form-input label
+$('input').focus(function () {
+    $(this).parents('.form-group').addClass('focused');
+});
 
-function showSuccessMsg(interval) {
-    successMsg.className = "visible"
-    setInterval(() => {
-        successMsg.className = "hidden"
-    }, interval);
-}
+$('input').blur(function () {
+    var inputValue=$(this).val();
+    if (inputValue=="") {
+        $(this).removeClass('filled');
+        $(this).parents('.form-group').removeClass('focused');
+    } else {
+        $(this).addClass('filled');
+    }
+})
 
