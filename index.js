@@ -17,9 +17,11 @@ form.addEventListener("submit", function (e) {
     showSuccessMsg(4000)
 })
 
+
 function showSuccessMsg(interval) {
     successMsg.className = "visible"
     setInterval(() => {
         successMsg.className = "hidden"
     }, interval);
 }
+
