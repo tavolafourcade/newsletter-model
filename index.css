@@ -61,8 +61,19 @@ h2 {
   font-size: 1.6rem;
 }
 
+input {
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 4px #ccc;
+  border-radius: 2rem;
+}
+
 button {
   display: block;
+  border-radius: 2rem;
   background: white;
   padding: 8px 30px;
   margin: 40px auto;
@@ -221,4 +232,31 @@ button:active {
     stroke-dashoffset: 3200;
     fill: #0074d9;
   }
+}
+
+#message-success {
+  position: absolute; 
+  left: 50%;
+}
+
+.dialog-message {
+  position: relative; 
+  left: -50%; 
+  background-color: #55efc4;
+  bottom: 50%;
+  margin-top: 100px;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s linear;
 }
