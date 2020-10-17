@@ -12,6 +12,7 @@ const form = document.getElementById("myForm")
 
 form.addEventListener("submit", function(e) {
     e.preventDefault()
-    console.log("email: ", email.value)
+    alert(`${email.value} successfully added! `)
+    email.value = ''
 })
 
