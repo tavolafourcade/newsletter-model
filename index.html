@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9e1a53f6e6.js" crossorigin="anonymous"></script>
@@ -11,8 +12,8 @@
                     <div class="form-wrapper">
                         <form id="myForm" class="child">
                             <h2>Join the newsletter</h2>
-                            <input type="text" id="email-input" placeholder="Enter your email">
-                            <button>SUBSCRIBE NOW</button>
+                            <input type="email" id="email-input" placeholder="Enter your email" required>
+                            <button onclick="thanks()">SUBSCRIBE NOW</button>
                             <div class="social">
                                 <div class="icon fb">
                                     <svg viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -67,3 +68,4 @@
         <script src="index.js"></script>
     </body>
 </html>
+

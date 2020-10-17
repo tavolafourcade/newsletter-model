@@ -15,3 +15,6 @@ form.addEventListener("submit", function(e) {
     console.log("email: ", email.value)
 })
 
+const thanks = () => {
+    window.alert("Thank you for subscribing!");
+}

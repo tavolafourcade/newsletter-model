@@ -102,11 +102,12 @@ input {
   padding: 10px 10px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 4px #ccc;
+  border-radius: 2rem;
 }
 
 button {
   display: block;
-
+  border-radius: 2rem;
   background: white;
   padding: 8px 30px;
   margin: 40px auto;
