@@ -14,12 +14,20 @@ SKILLS:
 color, background, margin, padding, border-radius, 
 CSS pseudo selectors (:active, :hover), transform
 */
+* {
+  font-family: 'montserrat', sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
-  font-family: "Noto Sans", sans-serif;
+  background: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
 }
 
 .section-area {
@@ -33,7 +41,13 @@ body {
 .section-area::before {
   content: "";
   position: absolute;
-  background: linear-gradient(to right, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  background: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
   opacity: 0.7;
   z-index: -1;
   top: 0;
@@ -53,12 +67,34 @@ body {
   text-align: center;
 }
 
+.form-wrapper {
+  margin: auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.8);
+  width: auto;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.form-wrapper:hover {
+  transform: translate(0, -20px);
+  box-shadow: 0 0 10px #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 h2 {
   /* color: #31e8ff; */
-  color: #666;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+  color: rgb(78, 75, 75);
+  margin-bottom: 60px;
   font-size: 1.6rem;
+  font-weight: 100;
 }
 
 input {
@@ -68,12 +104,12 @@ input {
   padding: 10px 10px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 4px #ccc;
-  border-radius: 2rem;
+  border-radius: 7px;
+  outline: none;
 }
 
 button {
   display: block;
-  border-radius: 2rem;
   background: white;
   padding: 8px 30px;
   margin: 40px auto;
@@ -81,15 +117,41 @@ button {
   color: #666;
   cursor: pointer;
   font-weight: 500;
+  border-radius: 7px;
+  outline: none;
+  transition: 0.5s ease;
 }
 
 button:hover {
-  background-image: linear-gradient(to right, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
+  color: white;
+}
+
+.form-wrapper:hover button {
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
   color: white;
 }
 
 button:active {
-  background-image: linear-gradient(to right, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%);
+  background-image: linear-gradient(
+    to right,
+    #000529 1%,
+    #002055 24%,
+    #005db5 67%,
+    #0074d9 100%
+  );
   color: white;
   font-size: 1.1rem;
 }
@@ -232,31 +294,4 @@ button:active {
     stroke-dashoffset: 3200;
     fill: #0074d9;
   }
-}
-
-#message-success {
-  position: absolute; 
-  left: 50%;
-}
-
-.dialog-message {
-  position: relative; 
-  left: -50%; 
-  background-color: #55efc4;
-  bottom: 50%;
-  margin-top: 100px;
-  padding: 1em;
-  border-radius: 10px;
-}
-
-.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s linear;
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s, opacity 1s linear;
 }
