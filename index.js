@@ -7,11 +7,10 @@ PART 2: STRETCH GOAL
 
 */
 
-const email = document.getElementById("email-input")
-const form = document.getElementById("myForm")
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault()
-    console.log("email: ", email.value)
-})
-
+var email = document.getElementById("email-input");
+var form = document.getElementById("myForm");
+var submitBtn = document.querySelector('#submit');
+submitBtn.addEventListener('click', function () {
+  console.log("email: ", email.value);
+  alert("Thank you! Your message has been received!");
+});
