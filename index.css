@@ -14,6 +14,9 @@ SKILLS:
 color, background, margin, padding, border-radius, 
 CSS pseudo selectors (:active, :hover), transform
 */
+* {
+  font-family: 'montserrat', sans-serif;
+}
 
 body {
   margin: 0;
@@ -25,7 +28,6 @@ body {
     #005db5 67%,
     #0074d9 100%
   );
-  font-family: "Noto Sans", sans-serif;
 }
 
 .section-area {
@@ -68,7 +70,7 @@ body {
 .form-wrapper {
   margin: auto;
   padding: 30px;
-  background: white;
+  background: rgba(255,255,255,0.8);
   width: auto;
   height: auto;
   transition: all 0.4s ease-in-out;
@@ -89,10 +91,10 @@ form {
 
 h2 {
   /* color: #31e8ff; */
-  color: #666;
+  color: rgb(78, 75, 75);
   margin-bottom: 60px;
-  letter-spacing: 2px;
   font-size: 1.6rem;
+  font-weight: 100;
 }
 
 input {
@@ -102,11 +104,12 @@ input {
   padding: 10px 10px;
   border: 2px solid #ccc;
   box-shadow: 0 4px 4px #ccc;
+  border-radius: 7px;
+  outline: none;
 }
 
 button {
   display: block;
-
   background: white;
   padding: 8px 30px;
   margin: 40px auto;
@@ -114,6 +117,9 @@ button {
   color: #666;
   cursor: pointer;
   font-weight: 500;
+  border-radius: 7px;
+  outline: none;
+  transition: 0.5s ease;
 }
 
 button:hover {

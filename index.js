@@ -7,11 +7,22 @@ PART 2: STRETCH GOAL
 
 */
 
-const email = document.getElementById("email-input")
-const form = document.getElementById("myForm")
+const email=document.getElementById("email-input")
+const form=document.getElementById("myForm")
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit",function (e) {
     e.preventDefault()
-    console.log("email: ", email.value)
+    console.log("email: ",email.value)
 })
 
+form.addEventListener("mouseover",function (e) {
+    e.preventDefault()
+    email.style.background = "linear-gradient(to right, purple,red, pink)"
+    email.style.color = "white"
+})
+
+form.addEventListener("mouseleave",function (e) {
+    e.preventDefault()
+    email.style.background = "white"
+    email.style.color = "black"
+})
