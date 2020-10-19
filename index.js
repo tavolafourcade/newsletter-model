@@ -15,18 +15,14 @@ form.addEventListener("submit",function (e) {
     console.log("email: ",email.value)
 })
 
-//js for animating form-input label
-$('input').focus(function () {
-    $(this).parents('.form-group').addClass('focused');
-});
-
-$('input').blur(function () {
-    var inputValue=$(this).val();
-    if (inputValue=="") {
-        $(this).removeClass('filled');
-        $(this).parents('.form-group').removeClass('focused');
-    } else {
-        $(this).addClass('filled');
-    }
+form.addEventListener("mouseover",function (e) {
+    e.preventDefault()
+    email.style.background = "linear-gradient(to right, purple,red, pink)"
+    email.style.color = "white"
 })
 
+form.addEventListener("mouseleave",function (e) {
+    e.preventDefault()
+    email.style.background = "white"
+    email.style.color = "black"
+})
